@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineAPI", "WineAPI\WineAPI.csproj", "{A0C55617-E2CB-4969-A641-54C7BF9BF70B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0C55617-E2CB-4969-A641-54C7BF9BF70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C55617-E2CB-4969-A641-54C7BF9BF70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C55617-E2CB-4969-A641-54C7BF9BF70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C55617-E2CB-4969-A641-54C7BF9BF70B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFD1E078-EFB7-4861-88D1-14E5D839A2C8}
+	EndGlobalSection
+EndGlobal
