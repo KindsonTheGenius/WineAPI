@@ -8,8 +8,6 @@ namespace WineAPI.Models
 {
     public static class ModelBuilderExtension
     {
-        private static WineContext _context;
-
         public static void Seed(this ModelBuilder modelBuilder)
         {
 
@@ -33,8 +31,8 @@ namespace WineAPI.Models
                     Year = "2021",
                     Size = 34,
                     CountInCeller = 10,
-                    Style = "Strong",
-                    Taste = "Good",
+                    Style = Style.dry,
+                    Taste =  "sweet, plum, cigar",
                     Description = "A very nice wine",
                     FoodPairing = "A good meal",
                     Link = "my link",

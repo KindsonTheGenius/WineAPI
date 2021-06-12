@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WineAPI.Models;
 
 namespace WineAPI
 {
@@ -15,7 +16,7 @@ namespace WineAPI
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-            host.Run();
+            host.Seed().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

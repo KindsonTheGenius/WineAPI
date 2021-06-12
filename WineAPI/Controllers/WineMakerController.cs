@@ -24,7 +24,9 @@ namespace WineAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<WineMaker>>> GetWineMaker()
         {
-            return await _context.WineMaker.ToListAsync();
+            return await _context.WineMaker
+                .Include(wineMaker => wineMaker.WineBottles)
+                .ToListAsync();
         }
 
         // GET: api/WineMaker/5

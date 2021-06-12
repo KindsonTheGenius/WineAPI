@@ -17,8 +17,8 @@ using WineAPI.Models;
 
         public DbSet<WineAPI.Models.WineBottle> WineBottle { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Seed();
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Seed();
+        //}
 }

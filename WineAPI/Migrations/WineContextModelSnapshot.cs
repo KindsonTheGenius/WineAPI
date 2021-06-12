@@ -38,8 +38,8 @@ namespace WineAPI.Migrations
                     b.Property<int>("Size")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Style")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Style")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Taste")
                         .HasColumnType("TEXT");
@@ -55,22 +55,6 @@ namespace WineAPI.Migrations
                     b.HasIndex("WineMakerId");
 
                     b.ToTable("WineBottle");
-
-                    b.HasData(
-                        new
-                        {
-                            WineBottleId = 1,
-                            CountInCeller = 10,
-                            Description = "A very nice wine",
-                            FoodPairing = "A good meal",
-                            Image = "Great",
-                            Link = "my link",
-                            Size = 34,
-                            Style = "Strong",
-                            Taste = "Good",
-                            WineMakerId = 1,
-                            Year = "2021"
-                        });
                 });
 
             modelBuilder.Entity("WineAPI.Models.WineMaker", b =>
@@ -88,14 +72,6 @@ namespace WineAPI.Migrations
                     b.HasKey("WineMakerId");
 
                     b.ToTable("WineMaker");
-
-                    b.HasData(
-                        new
-                        {
-                            WineMakerId = 1,
-                            Address = "Budapest utca 45",
-                            Name = "Kindson Munonye"
-                        });
                 });
 
             modelBuilder.Entity("WineAPI.Models.WineBottle", b =>

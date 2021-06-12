@@ -29,7 +29,7 @@ namespace WineAPI.Migrations
                     Year = table.Column<string>(nullable: true),
                     Size = table.Column<int>(nullable: false),
                     CountInCeller = table.Column<int>(nullable: false),
-                    Style = table.Column<string>(nullable: true),
+                    Style = table.Column<int>(nullable: false),
                     Taste = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     FoodPairing = table.Column<string>(nullable: true),
@@ -47,16 +47,6 @@ namespace WineAPI.Migrations
                         principalColumn: "WineMakerId",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "WineMaker",
-                columns: new[] { "WineMakerId", "Address", "Name" },
-                values: new object[] { 1, "Budapest utca 45", "Kindson Munonye" });
-
-            migrationBuilder.InsertData(
-                table: "WineBottle",
-                columns: new[] { "WineBottleId", "CountInCeller", "Description", "FoodPairing", "Image", "Link", "Size", "Style", "Taste", "WineMakerId", "Year" },
-                values: new object[] { 1, 10, "A very nice wine", "A good meal", "Great", "my link", 34, "Strong", "Good", 1, "2021" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_WineBottle_WineMakerId",
