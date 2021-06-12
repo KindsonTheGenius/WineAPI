@@ -44,8 +44,6 @@ namespace WineAPI.Controllers
         }
 
         // PUT: api/WineMaker/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutWineMaker(int id, WineMaker wineMaker)
         {
@@ -76,8 +74,6 @@ namespace WineAPI.Controllers
         }
 
         // POST: api/WineMaker
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<WineMaker>> PostWineMaker(WineMaker wineMaker)
         {
@@ -102,9 +98,6 @@ namespace WineAPI.Controllers
 
             return wineMaker;
         }
-
-        // GEt wine maker bottles
-
 
         private bool WineMakerExists(int id)
         {

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WineAPI.Migrations
 {
     [DbContext(typeof(WineContext))]
-    [Migration("20210612112123_InitialData")]
+    [Migration("20210612194702_InitialData")]
     partial class InitialData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,8 +49,8 @@ namespace WineAPI.Migrations
                     b.Property<int>("WineMakerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Year")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Year")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("WineBottleId");
 

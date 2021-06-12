@@ -26,7 +26,7 @@ namespace WineAPI.Migrations
                 {
                     WineBottleId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Year = table.Column<string>(nullable: true),
+                    Year = table.Column<int>(nullable: false),
                     Size = table.Column<int>(nullable: false),
                     CountInCeller = table.Column<int>(nullable: false),
                     Style = table.Column<int>(nullable: false),

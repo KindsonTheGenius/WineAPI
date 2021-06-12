@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace WineAPI.Seeders
 
         public void Seed()
         {
-            AddNewWineMaker(new WineMaker { WineMakerId = 0, Name = "Kindson", Address="Budapest" });
-          //  AddNewWineMaker(new WineMaker { WineMakerId = 1, Name = "Mila", Address="Hungary" });
-          //  AddNewWineMaker(new WineMaker { WineMakerId = 2, Name = "Helen", Address="Vaci ut. 23" });
+            AddNewWineMaker(new WineMaker { WineMakerId = 1, Name = "Kindson", Address="Budapest", WineBottles= new List<WineBottle>() });
+            AddNewWineMaker(new WineMaker { WineMakerId = 2, Name = "Mila", Address="Hungary", WineBottles = new List<WineBottle>() });
+            AddNewWineMaker(new WineMaker { WineMakerId = 3, Name = "Helen", Address="Vaci ut. 23", WineBottles = new List<WineBottle>() });
             _context.SaveChanges();
         }
 

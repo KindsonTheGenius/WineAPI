@@ -25,6 +25,7 @@ namespace WineAPI.Models
                 // now that the database is up to date. Let's seed
                 new WineMakerSeeder(context).Seed();
 
+
 #if DEBUG
                 // if we are debugging, then let's run the test data seeder
                 // alternatively, check against the environment to run this seeder

@@ -14,7 +14,7 @@ namespace WineAPI.Models
     public class WineBottle
     {
         public int WineBottleId { get; set; }
-        public string Year { get; set; }
+        public int Year { get; set; }
         public int Size { get; set; }
         public int CountInCeller { get; set; }
         public  Style Style { get; set; }
@@ -24,15 +24,13 @@ namespace WineAPI.Models
         public string Link { get; set; }
         public string Image { get; set; }
         public int WineMakerId { get; set; }
-
-        [JsonIgnore]
         public WineMaker WineMaker { get; set; }
 
         public WineBottle()
         {
         }
 
-        public WineBottle(int wineBottleId, string year, int size, int countInCeller, Style style, string taste, string description, string foodPairing, string link, string image, int wineMakerId, WineMaker wineMaker)
+        public WineBottle(int wineBottleId, int year, int size, int countInCeller, Style style, string taste, string description, string foodPairing, string link, string image, int wineMakerId, WineMaker wineMaker)
         {
             WineBottleId = wineBottleId;
             Year = year;

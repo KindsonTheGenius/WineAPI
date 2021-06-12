@@ -47,8 +47,8 @@ namespace WineAPI.Migrations
                     b.Property<int>("WineMakerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Year")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Year")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("WineBottleId");
 
