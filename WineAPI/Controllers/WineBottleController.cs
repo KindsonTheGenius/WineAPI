@@ -66,8 +66,8 @@ namespace WineAPI.Controllers
             return wineBottles;
         }
 
-        // *********** FILTER  BY YEAR RANGE - /api/winebottle/?startyear=2021&&endyear=2022 *********** 
-        [HttpGet]
+        // *********** FILTER  BY YEAR RANGE - /api/winebottle/2021/2023 *********** 
+        [HttpGet("{startyear}/{endyear}")]
         public async Task<ActionResult<IEnumerable<WineBottle>>> GetWineBottlesByYearRange(int startyear, int endyear)
         {
             var wineBottles = await _context.WineBottle.Where(x => x.Year >= startyear && x.Year >= endyear).ToListAsync();
