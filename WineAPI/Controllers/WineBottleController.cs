@@ -40,7 +40,7 @@ namespace WineAPI.Controllers
             return wineBottle;
         }
 
-        // *********** FILTER  BY WINEMAKER - /api/bottles/winemaker/1 *********** 
+        // *********** FILTER  BY WINEMAKER - /api/winebottle/winemaker/1 *********** 
         [HttpGet("winemaker/{id}")]
         public async Task<ActionResult<IEnumerable<WineBottle>>> GetWineBottlesByWineMaker(int id)
         {
@@ -53,11 +53,24 @@ namespace WineAPI.Controllers
             return wineBottles;
         }
 
-        // *********** FILTER  BY YEAR - /api/bottles/winemaker/2021 *********** 
+        // *********** FILTER  BY YEAR - /api/bottles/2021 *********** 
         [HttpGet("{year}")]
         public async Task<ActionResult<IEnumerable<WineBottle>>> GetWineBottlesByYear(int year)
         {
             var wineBottles = await _context.WineBottle.Where(x => x.Year == year).ToListAsync();
+
+            if (wineBottles == null)
+            {
+                return NotFound();
+            }
+            return wineBottles;
+        }
+
+        // *********** FILTER  BY YEAR RANGE - /api/winebottle/?startyear=2021&&endyear=2022 *********** 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<WineBottle>>> GetWineBottlesByYearRange(int startyear, int endyear)
+        {
+            var wineBottles = await _context.WineBottle.Where(x => x.Year >= startyear && x.Year >= endyear).ToListAsync();
 
             if (wineBottles == null)
             {
