@@ -23,6 +23,7 @@ namespace WineAPI.Models
         public string FoodPairing { get; set; }
         public string Link { get; set; }
         public string Image { get; set; }
+        public int WineImageId { get; set; }
         public int WineMakerId { get; set; }
         public WineMaker WineMaker { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WineAPI.Migrations
 {
@@ -6,6 +7,20 @@ namespace WineAPI.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "WineImage",
+                columns: table => new
+                {
+                    WineImageId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    WineImageTitle = table.Column<string>(nullable: true),
+                    WineImageData = table.Column<byte[]>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WineImage", x => x.WineImageId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "WineMaker",
                 columns: table => new
@@ -35,6 +50,7 @@ namespace WineAPI.Migrations
                     FoodPairing = table.Column<string>(nullable: true),
                     Link = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
+                    WineImageId = table.Column<int>(nullable: false),
                     WineMakerId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -58,6 +74,9 @@ namespace WineAPI.Migrations
         {
             migrationBuilder.DropTable(
                 name: "WineBottle");
+
+            migrationBuilder.DropTable(
+                name: "WineImage");
 
             migrationBuilder.DropTable(
                 name: "WineMaker");

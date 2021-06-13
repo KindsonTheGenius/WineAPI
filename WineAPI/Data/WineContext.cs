@@ -12,9 +12,8 @@ using WineAPI.Models;
             : base(options)
         {
         }
-
-        public DbSet<WineAPI.Models.WineMaker> WineMaker { get; set; }
-
-        public DbSet<WineAPI.Models.WineBottle> WineBottle { get; set; }
+        public DbSet<WineMaker> WineMaker { get; set; }
+        public DbSet<WineBottle> WineBottle { get; set; }
+        public DbSet<WineImage> WineImage { get; set; }
 
 }

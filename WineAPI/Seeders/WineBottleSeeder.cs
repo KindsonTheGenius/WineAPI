@@ -28,12 +28,11 @@ namespace WineAPI.Seeders
                 Taste = "sweet, plum, cigar",
                 Description = "A very nice wine",
                 FoodPairing = "A good meal",
-                Link = "my link",
+                Link = "https://www.kindsonthegenius.com/wp-content/uploads/2020/09/Data-Science-Tutorials-By-Kindson.jpg",
                 Image = "Great",
                 WineMakerId = 1,
                 WineMaker = wineMaker
             };
-           // wineMaker.WineBottles.Add(wineBottle);
             AddNewWineBottle(wineBottle);
 
             _context.SaveChanges();
